@@ -12,5 +12,10 @@ void main() {
       final calculator = StringCalculator();
       expect(calculator.add('5'), 5);
     });
+
+    test('two comma separated numbers return sum', () {
+      final calculator = StringCalculator();
+      expect(calculator.add('1,5'), 6);
+    });
   });
 }
