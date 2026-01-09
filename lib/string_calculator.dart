@@ -1,5 +1,7 @@
 class StringCalculator {
   int add(String numbers) {
+    if (numbers.isEmpty) return 0;
+
     String delimiter = ',';
     String numbersPart = numbers;
 
@@ -10,12 +12,14 @@ class StringCalculator {
 
     final normalized = numbersPart.replaceAll('\n', delimiter);
     final values = normalized.split(delimiter).map(int.parse).toList();
+
     final negatives = values.where((n) => n < 0).toList();
     if (negatives.isNotEmpty) {
       throw ArgumentError(
         'negative numbers not allowed ${negatives.join(',')}',
       );
     }
-    return values.reduce((a, b) => a + b);
+
+    return values.fold(0, (sum, n) => sum + n);
   }
 }
