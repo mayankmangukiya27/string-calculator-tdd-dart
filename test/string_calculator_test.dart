@@ -44,5 +44,13 @@ void main() {
         ),
       );
     });
+
+    test('multiple negative numbers are listed in exception', () {
+      final calculator = StringCalculator();
+      expect(
+        () => calculator.add('1,-2,-3'),
+        throwsA(predicate((e) => e.toString().contains('-2,-3'))),
+      );
+    });
   });
 }
