@@ -8,7 +8,7 @@ starting with simple cases and gradually adding functionality through tests.
 
 ---
 
-## 📌 Requirements Implemented
+## Requirements Implemented
 
 - Empty string returns `0`
 - Single number returns its value
@@ -20,7 +20,7 @@ starting with simple cases and gradually adding functionality through tests.
 
 ---
 
-## 🧪 TDD Approach
+## TDD Approach
 
 Each feature was implemented using the following TDD cycle:
 
@@ -33,5 +33,5 @@ The Git history reflects this incremental approach.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
