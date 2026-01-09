@@ -1,8 +1,11 @@
-import 'package:string_calculator/string_calculator.dart';
 import 'package:test/test.dart';
+import 'package:string_calculator/string_calculator.dart';
 
 void main() {
-  test('calculate', () {
-    expect(calculate(), 42);
+  group('StringCalculator', () {
+    test('empty string returns 0', () {
+      final calculator = StringCalculator();
+      expect(calculator.add(''), 0);
+    });
   });
 }
